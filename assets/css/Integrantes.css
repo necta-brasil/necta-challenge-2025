@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.header {
+  background: #0a1f44;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #e63946;
+}
+
+.header-content p {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+}
+
+.btn-voltar {
+  background: #fff;
+  color: #0a1f44;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  border: 2px solid #e63946;
+  margin-top: 1rem;
+}
+
+.btn-voltar:hover {
+  background: #e63946;
+  color: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.sobre, .equipe {
+  margin-bottom: 2rem;
+}
+
+.sobre h2, .equipe h2 {
+  color: #e63946;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #e63946;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.sobre p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 200px;
+  border: 2px solid #0a1f44;
+  transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #e63946;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  color: #0a1f44;
+}
+
+.links a {
+  display: inline-block;
+  margin: 0.2rem;
+  text-decoration: none;
+  color: #e63946;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #0a1f44;
+}
+
+.footer {
+  background: #0a1f44;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  border-top: 5px solid #e63946;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
+
+/* Extra Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-voltar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+  .card {
+    width: 45%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card {
+    width: 30%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card {
+    width: 200px;
+  }
+}
+
+/* Extra-Large devices (large laptops and desktops, 1300px and up) */
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1200px;
+  }
+}
