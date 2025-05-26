@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff;
+  color: #0a1f44; 
+  line-height: 1.6;
+  padding: 2rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #e63946; 
+  margin-bottom: 0.5rem;
+}
+
+.back-link {
+  position: absolute;
+  left: 1rem;
+  top: 2.2rem;
+  font-size: 1rem;
+  color: #0a1f44;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  background-color: #cdcdcd;
+  border-radius: 10px;
+  width: 150px;
+  padding: 5px;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq details {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  background: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: none;
+}
+
+.faq details[open] {
+  background-color: #ffe8e8; 
+}
+
+.faq summary {
+  font-weight: 600;
+  font-size: 1.2rem;
+  list-style: none;
+  outline: none;
+  user-select: none;
+  color: #e63946;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::before {
+  content: '›';
+  display: inline-block;
+  transform: rotate(90deg);
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+  color: #e63946;
+}
+
+details[open] summary::before {
+  transform: rotate(270deg);
+}
+
+.faq p {
+  margin-top: 0.7rem;
+  color: #0a1f44;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Responsividade simples */
+
+@media (max-width: 600px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+}
