@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dde7f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.header {
+    background-color: #2D2A63;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: white;
+}
+.btn-voltar {
+  display: inline-block;
+  margin: 1.5rem 0;
+  padding: 0.6rem 1.2rem;
+  background-color: #b22222; 
+  color: #f0f4f8; 
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+.btn-voltar:hover {
+  background-color: #112244; 
+  color: #fff;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contato-section h2 {
+    color: #d35050;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2D2A63;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+}
+
+#submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #d35050;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-btn:hover {
+    background-color: #b73b3b;
+}
+
+/* Extra Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  textarea {
+    width: 90vw; 
+    height: 120px;
+    }
+
+@media (max-width: 600px) {
+  .btn-voltar {
+    width: 200px;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.8rem 0;
+  }
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) {
+  textarea {
+    width: 320px;
+    height: 140px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+  textarea {
+    width: 350px;
+    height: 150px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+  textarea {
+    width: 400px;
+    height: 160px;
+  }
+}
+
+/* Extra-Large devices (large laptops and desktops, 1300px and up) */
+@media (min-width: 1300px) {
+  textarea {
+    width: 450px;
+    height: 180px;
+  }
+}
