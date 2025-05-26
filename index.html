@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TeleConsulta - Formulário</title>
+  <link rel="stylesheet" href="assets/css/index.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Botão hamburguer -->
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <nav class="menu">
+      <img src="assets/img/logo.png" alt="logo" class="logo" />
+      <h2>TeleConsulta</h2>
+      <hr />
+      <ul>
+        <li><a href="index.html"><span>🏠</span> Início</a></li>
+        <li><a href="integrantes.html"><span>👥</span> Quem Somos</a></li>
+        <li><a href="contato.html"><span>✉️</span> Contato</a></li>
+        <li><a href="faq.html"><span>💬</span> FAQ (perguntas frequentes)</a></li>
+      </ul>
+    </nav>
+
+    <main class="formulario">
+      <form id="form-paciente">
+        <h1>TeleConsulta</h1>
+
+        <div class="grupo-input">
+          <input
+            type="text"
+            name="fullName"
+            placeholder="Nome Completo"
+            minlength="3"
+            autocomplete="on"
+            required
+          />
+        </div>
+
+        <div class="grupo-input">
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            placeholder="CPF (apenas números)"
+            pattern="\d{11}"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div class="grupo-input">
+          <div class="color-label">
+            <label for="consultaDate">Data da Consulta:</label>
+          </div>
+          <input type="date" id="consultaDate" name="consultaDate" required />
+        </div>
+
+        <button type="submit" id="startButton">Iniciar TeleConsulta</button>
+
+        <div id="errorMessages"></div>
+      </form>
+    </main>
+  </div>
+
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

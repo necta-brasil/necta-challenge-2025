@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dde7f2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  height: 80vh;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu à esquerda */
+.menu {
+  background-color: #2d2a63;
+  color: white;
+  width: 30%;
+  padding: 2rem 3rem;
+}
+
+.menu h2 {
+  margin-bottom: 1.5rem;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin-bottom: 1rem;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+  object-fit: cover;
+}
+
+/* Formulário à direita */
+.formulario {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#form-paciente {
+  width: 100%;
+  max-width: 400px;
+}
+
+#form-paciente h1 {
+  margin-bottom: 1.5rem;
+  color: #d35050;
+}
+
+.grupo-input {
+  margin-bottom: 1rem;
+}
+
+.grupo-input input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.color-label label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #d35050;
+  font-weight: bold;
+}
+
+#startButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #d35050;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+#startButton:hover {
+  background-color: #b73b3b;
+}
+
+/* Botão hamburguer - escondido no desktop */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: #2d2a63;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Responsividade com hamburger */
+/* Base (mobile first) */
+.container {
+  flex-direction: column;
+  padding-top: 60px; /* espaço pro menu-toggle */
+}
+
+.menu {
+  position: fixed;
+  left: -250px; /* escondido */
+  width: 250px;
+  height: 100vh;
+  transition: left 0.3s ease;
+}
+
+.menu.menu-active {
+  left: 0;
+}
+
+.menu-toggle {
+  display: block;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1000;
+}
+    
+/* Phones (max-width: 600px) */
+@media (max-width: 600px) {
+  /* mantém menu escondido e botão visível */
+}
+
+/* Portrait tablets e large phones (min-width: 600px) */
+@media (min-width: 600px) {
+  /* igual ao mobile */
+}
+
+/* Landscape tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    height: 80vh;
+    padding-top: 0;
+  }
+
+  .menu {
+    position: relative;
+    left: 0;
+    width: 30%;
+    height: auto;
+    padding: 2rem 3rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .formulario {
+    width: 70%;
+    padding: 2rem;
+    margin-top: 0;
+  }
+}
+
+/* Laptops/desktops (min-width: 992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+/* Large laptops/desktops (min-width: 1300px) */
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1300px;
+  }
+}
